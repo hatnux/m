@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love letter for crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="love letter 2.css" />
+  </head>
+  <body>
+    <!-- Night sky -->
+    <div id="night-sky" style="--number-of-stars: 20"></div>
+
+    <!-- Envelope content -->
+    <div class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
+        <div class="letter">
+         
+          <div class="words line1">إلى محبوبتي:
+يا من تسلل إلى أعماق روحي بلا استئذان، كيف لي أن أهرب من هواك وقد صار نبضي لا ينبض إلا باسمك؟ ذاك النفق الذي حفرته في قلبي، ليس سوى طريق يأخذني إليك، بلا عودة، بلا نهاية، أراك في كل لحظة، في نظرة عيني، وفي دقات قلبي، كأنك الهواء الذي أتنفسه. ألم يسألك قلبي يومًا عن الراحة؟ أم أنه اختار بكامل وعيه أن يغرق في حبك بلا نجاة؟ أنت النجم الذي أراه كل ليلة، الساطع في سمائي، الذي لا شبيه له ولا بديل. فهل أحتاج إلى منقذ؟ أم أنني وجدت في الاستسلام إليك ملجأً، وفي حبك ملاذي الأبدي؟</div>
+        <div class="words line2">❤ </div>
+        </div>
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+          <div class="heart a4"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Countdown container -->
+    <div id="countdown-container" style="text-align: center; margin-top: 20px;">
+      <h2 style="font-family: 'Dancing Script', cursive; color: #d9534f;">Ouverture dans </h2>
+      <div id="countdown" style="font-size: 24px; font-weight: bold; color: #d9534f;">Chargement...</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="love letter 2.js"></script>
+    
+	<!-- Audio background -->
+    <audio id="background-music" loop>
+      <source src="Guitar music.mp3" type="audio/mpeg">
+      
+    </audio>
+
+
+    <!-- Button to control music -->
+	
+    <button id="toggle-music" style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #d9534f; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Désactiver la musique
+    </button>
+
+   
+
+    <!-- Music control script -->
+    <script>
+      var music = document.getElementById("background-music");
+      var button = document.getElementById("toggle-music");
+
+      // Play the music automatically when the page is loaded
+      window.onload = function () {
+        music.play();
+        button.innerText = "Désactiver la musique"; // Change button text to "Disable Music"
+      };
+
+      // Toggle music play/pause when the button is clicked
+      button.onclick = function () {
+        if (music.paused) {
+          music.play();
+          button.innerText = "Désactiver la musique"; // Change button text to "Disable Music"
+        } else {
+          music.pause();
+          button.innerText = "Activer la musique"; // Change button text to "Enable Music"
+        }
+      };
+    </script>
+  </body>
+</html>
+
